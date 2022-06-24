@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>
+           grid
+        </title>
+        <style>
+            body{
+                display:grid;
+                margin: 0;
+                padding: 10px;
+                grid-template-areas: 
+                "header header header header"
+                " nav nav nav ads "
+                "news article intro footer";
+                grid-template-columns: 200px;
+                grid-template-rows: 100px;
+                grid-column-gap: 10px;
+                grid-row-gap:10px;
+                box-sizing: border-box;
+                color:beige;
+                
+              
+                height: 100vh;
+                
+
+            }
+            a{
+                text-decoration: none;
+                color: cyan;
+                font-size: larger;
+                
+            }
+            a:hover{
+                background-color: rgb(3, 19, 19);
+                color: rgb(132, 218, 132);
+            }
+           div{
+                background-color: rgb(1, 32, 13);
+                 padding:10px;
+                 FONT-WEIGHT: 700;
+                
+                 
+            }
+            div.footer{
+                text-align-last: 50px;
+                height: 100%;
+                
+            }
+           
+            
+            .header{
+                grid-area: header;
+
+            }
+            .nav{
+                grid-area: nav;
+            }
+            .ads{
+                grid-area: ads;
+            }
+            .article{
+                grid-area: article;
+            }
+            .footer{
+                grid-area: footer;
+              
+                
+            }
+            @media only screen and (max-width:600px){
+                body{
+
+                    grid-template-areas:
+                    "header"
+                    "news"
+                    "ads"
+                    "article"
+                    "intro"
+                    "nav"
+                    "footer"
+                }
+                
+            }
+            .ads{
+
+                text-align: center;
+            }
+            .intro{
+               font-style: italic; 
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+               height: 100%;
+            }
+            p{
+                width: 25%;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+      <div class="header"><h1>welcome,this is my first website</h1>
+      </div>
+      <div class="nav"> 
+        <a href="calculator.html">calculator</a><br>
+        <a href="ngr.html">my profile</a><br>
+        <a href="daraz.html">daraz</a><br>
+        <a href="cyberatack.html">live cyberattack</a><br>
+        <a href="ngr.html">my profile</a>
+           
+      </div>
+      <div class="article">article</div>
+      <div class="news">news</div>
+      <div class="ads">no ads yet</div>
+      <div class="intro">hello everyone,<br>
+      <p> I am nishan neupane from thimi,bhaktapur,nepal 
+       bagmati zone.<br>i am currently studying in seabird international college<br>
+       thank you.</p>
+    </div>
+      <div class="footer">
+          
+         <h3> copyright &COPY; 2022 nishanneupane </h3>
+         
+      </div>
+      
+    </body>
+    
+</html>

@@ -1,0 +1,47 @@
+.container{
+    text-align: center;
+    margin-top: 23px;
+    }
+.calculator{
+    text-align: center;
+    background-color: rgb(10, 39, 170);
+}
+input{
+    font-size: 32px;
+    border: 10px solid black;
+    width: 60%;
+    height: 60px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+p{
+    text-align: right;
+    color: green;
+    margin:0px;
+}
+h2{
+    font-size: xx-large;
+    color: green;
+}
+h3{
+color: green;
+}
+table{
+    margin: auto;
+
+}
+button{
+    font-size: 32px;
+    background-color: rgb(228, 109, 13);
+    color: white;
+    border: 2px solid red;
+    border-radius: 50px;
+    margin: 5px;
+}
+details{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

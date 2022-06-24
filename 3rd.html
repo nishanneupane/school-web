@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        body{
+            background: linear-gradient(#010211,rgb(23, 2, 71));
+        }
+        .calculator{
+            width: 300px;
+            height: 500px;
+            background-color: rgb(13, 13, 66);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgb(13, 13, 66);
+            text-align: center;
+            padding: 0px 5px;
+
+
+
+        }
+        h2{
+            color: azure;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        label{
+            color: wheat;
+            margin: 10px;
+
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            padding: 5px;
+            margin: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        button{
+            font-size:18px ;
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            color: rgb(14, 14, 13);
+            background-color: rgb(230, 118, 14);
+            font-weight: 999;
+
+
+        }
+        p{
+            color:aliceblue;
+            margin-top: 20px;
+
+
+        }
+
+        </style>
+
+</head>
+<body>
+    <div class="calculator">
+        <h2>simple interest calculator</h2>
+        <br>
+        <label for="amount">principle </label>
+        <input type="number" placeholder="enter principle" id="p">
+    <br>
+        <label for="time">time </label>
+        <input type="number" placeholder="enter time" id="t">
+    <br>
+    <label for="rate">rate(%) </label>
+        <input type="number" placeholder="enter rate" id="r">
+    <br>
+   <button onclick="answer()">calculate</button>
+
+</p>
+<p>total value: <span id="o">
+
+</span>
+</p>
+    </div><br>
+
+    
+</body>
+<script>
+    function answer()
+    {
+       let a= document.getElementById('p').value;
+       let b=document.getElementById('t').value;
+       let c=document.getElementById('r').value;
+       let ss=a*b*c/100;
+       document.getElementById('o').innerHTML=ss;
+      
+
+    }
+</script>
+</html>

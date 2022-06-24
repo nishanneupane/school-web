@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
+    
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(#02085a, #046819);
+}
+.container {
+  background-color: #43c9e0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  max-width: 600px;
+  min-width: 350px;
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  height: 80vh;
+}
+label {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+input {
+  margin-bottom: 20px;
+  border: none;
+  font-size: 20px;
+  border-bottom: 2px solid #3f0202;
+  color: #21bd89;
+  padding: 2px 15px;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2.4px solid #580311;
+}
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.input-wrapper input {
+  width: 100%;
+}
+.time-wrapper input {
+  width: 60%;
+}
+select {
+  width: 35%;
+  border: 1px solid #cfbcbc;
+  font-size: 20px;
+  margin-left: 3%;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+button {
+  display: block;
+  background-color: #256812;
+  border: none;
+  color: #ffffff;
+  margin: 20px auto 0 auto;
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+#result {
+  background-color: #c6ffe2;
+  margin-top: 30px;
+  color: #585858;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+}
+#result div {
+  margin-bottom: 10px;
+}
+#result span {
+  color: #000000;
+  font-weight: 500;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-wrapper">
+        <div class="wrapper">
+          <label for="principal">Principal($):</label>
+          <input type="number" id="principal" value="" placeholder="enter principle"/>
+        </div>
+        <div class="wrapper">
+          <label for="rate">Rate:</label>
+          <input type="number" id="rate" value="" placeholder="enter rate"/>
+        </div>
+      </div>
+      <label for="time">Time:</label>
+      <div class="time-wrapper">
+        <input type="number" id="time" value=""  placeholder="enter time"/>
+        <select name="duration" id="duration">
+          <option value="year">Year</option>
+          <option value="month">Month</option>
+        </select>
+      </div>
+      <button id="calculate-btn">Calculate</button>
+      <div id="result"></div>
+    </div>
+    <!-- Script -->
+    <script>
+        let calculateBtn = document.getElementById("calculate-btn");
+let result = document.getElementById("result");
+let calculate = () => {
+  let p = Number(document.getElementById("principal").value);
+  let r = Number(document.getElementById("rate").value);
+  let t = Number(document.getElementById("time").value);
+  let duration = document.getElementById("duration").value;
+  let simpleInterest =
+    duration == "year" ? (p * r * t) / 100 : (p * r * t) / 1200;
+  let amount = p + simpleInterest;
+
+  result.innerHTML = `<div>Principal Amount: <span>${p.toFixed(2)}</span></div>
+  <div>Total Interest: <span>${simpleInterest.toFixed(2)}</span></div>
+  <div>Total rate: <span>${r.toFixed(2)}</span></div>
+  <div>Total Amount: <span>${amount.toFixed(2)}</span></div>`;
+};
+calculateBtn.addEventListener("click", calculate);
+window.addEventListener("load", calculate);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<!-- Created By CodingNepal -->
+
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Digital Clock with Glowing Effect | CodingNepal</title>
+
+ <!--<style type="text/css">*{ margin: 0; padding: 0; font-family: 'Poppins', sans-serif; } html,body{ display: grid; height: 100%; place-items: center; background: #000; } .wrapper{ height: 100px; width: 360px; position: relative; background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); border-radius: 10px; cursor: default; animation: animate 1.5s linear infinite; } .wrapper .display, .wrapper span{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } .wrapper .display{ z-index: 999; height: 85px; width: 345px; background: #1b1b1b; border-radius: 6px; text-align: center; } .display #time{ line-height: 85px; color: #fff; font-size: 50px; font-weight: 600; letter-spacing: 1px; background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: animate 1.5s linear infinite; } @keyframes animate { 100%{ filter: hue-rotate(360deg); } } .wrapper span{ height: 100%; width: 100%; border-radius: 10px; background: inherit; } .wrapper span:first-child{ filter: blur(7px); } .wrapper span:last-child{ filter: blur(20px); }</style>-->
+<style type="text/css">Working Digital Clock JavaScriptWorking Analog Clock in  JavaScriptResponsive Coming Soon Page DesignColorful Gradient Glowing Effect on Hover
+
+Digital Clock with Colorful Glowing Effect [Source Codes]
+
+To create this program (Digital Clock with Colorful Glowing Effect). First, you need to create two Files one HTML File and another one is CSS File. After creating these files just paste the following codes in your file.
+
+First, create an HTML file with the name of index.html and paste the given codes in your HTML file. Remember, you’ve to create a file with .html extension.
+
+<!DOCTYPE html>
+
+<!-- Created By CodingNepal -->
+
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Digital Clock with Glowing Effect | CodingNepal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="display">
+
+<div id="time"></div>
+
+</div>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+<script>
+
+setInterval(()=>{
+
+const time = document.querySelector(".display #time");
+
+let date = new Date();
+
+let hours = date.getHours();
+
+let minutes = date.getMinutes();
+
+let seconds = date.getSeconds();
+
+let day_night = "AM";
+
+if(hours > 12){
+
+day_night = "PM";
+
+hours = hours - 12;
+
+}
+
+if(seconds < 10){
+
+seconds = "0" + seconds;
+
+}
+
+if(minutes < 10){
+
+minutes = "0" + minutes;
+
+}
+
+if(hours < 10){
+
+hours = "0" + hours;
+
+}
+
+time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+
+});
+
+</script>
+
+</body>
+
+</html>
+
+Second, create a CSS file with the name of style.css and paste the given codes in your CSS file. Remember, you’ve to create a file with .css extension.
+
+*{
+
+margin: 0;
+
+padding: 0;
+
+font-family: 'Poppins', sans-serif;
+
+}
+
+html,body{
+
+display: grid;
+
+height: 100%;
+
+place-items: center;
+
+background: #000;
+background: linear-gradient(blue,yellow,red,black,brown,white,purple);
+
+}
+
+.wrapper{
+
+height: 100px;
+
+width: 360px;
+
+position: relative;
+
+background: linear-gradient(brown,blue,green,yellow);
+border-radius: 10px;
+
+cursor: default;
+
+animation: animate 1.5s linear infinite;
+
+}
+
+.wrapper .display,
+
+.wrapper span{
+
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+}
+
+.wrapper .display{
+
+z-index: 999;
+
+height: 85px;
+
+width: 345px;
+
+background: #1b1b1b;
+
+border-radius: 6px;
+
+text-align: center;
+
+}
+
+.display #time{
+
+line-height: 85px;
+
+color: #fff;
+
+font-size: 40px;
+
+font-weight: 1000;
+
+letter-spacing: 1px;
+
+background: linear-gradient(blue,white,red,orange);
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: animate 1.5s linear infinite;
+
+}
+
+@keyframes animate {
+
+100%{
+
+filter: hue-rotate
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="display">
+
+<div id="time"></div>
+
+</div>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+<script>
+
+setInterval(()=>{
+
+const time = document.querySelector(".display #time");
+
+let date = new Date();
+
+let hours = date.getHours();
+
+let minutes = date.getMinutes();
+
+let seconds = date.getSeconds();
+
+let day_night = "AM";
+
+if(hours > 12){
+
+day_night = "PM";
+
+hours = hours - 12;
+
+}
+
+if(seconds < 10){
+
+seconds = "0" + seconds;
+
+}
+
+if(minutes < 10){
+
+minutes = "0" + minutes;
+
+}
+
+if(hours < 10){
+
+hours = "0" + hours;
+
+}
+
+time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+
+});
+
+</script>
+
+</body>
+
+</html>
